@@ -26,13 +26,24 @@ export default
         validation: Rule => Rule.required()
       },
       {
+        name: 'seoTitle',
+        type: 'string',
+        title: 'Seo Title',
+        validation: Rule => Rule.required()
+      },
+      {
+        name: 'seoMetaDescription',
+        type: 'text',
+        title: 'Seo Meta Description',
+        validation: Rule => Rule.required()
+      },
+      {
         name: 'coverImage',
         title: 'Cover Image',
         type: 'image',
         options: {
           hotspot: true
-        },
-        validation: Rule => Rule.required()
+        }
       },
       {
         name: 'content',
