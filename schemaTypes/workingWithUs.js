@@ -15,22 +15,35 @@ export default
         title: 'Section Subtitle',
       },
       {
-        name: 'title', // Keep as is
-        type: 'string',
-        title: 'Title',
-      },
-      {
-        name: 'description', // Keep as is
-        type: 'text',
-        title: 'Description',
-      },
-      {
-        name: 'image', // Keep as is
-        type: 'image',
-        title: 'Icon',
-        options: {
-          hotspot: true,
-        },
+        name: 'items',
+        type: 'array',
+        title: 'Items',
+        of: [
+          {
+            type: 'object',
+            title: 'Item',
+            fields: [
+              {
+                name: 'title', // Keep as is
+                type: 'string',
+                title: 'Title',
+              },
+              {
+                name: 'description', // Keep as is
+                type: 'text',
+                title: 'Description',
+              },
+              {
+                name: 'image', // Keep as is
+                type: 'image',
+                title: 'Icon',
+                options: {
+                  hotspot: true,
+                },
+              },
+            ],
+          },
+        ],
       },
     ],
   }

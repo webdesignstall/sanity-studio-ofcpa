@@ -7,7 +7,8 @@ export default defineConfig({
   name: 'default',
   title: 'ofcpa',
 
-  projectId: 'y2x1cizf',
+  // projectId: 'unsvh2cy',
+  projectId: 'unsvh2cy',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
