@@ -7,6 +7,7 @@ import taxCorporateServices from './taxCorporateServices'
 import packages from './packages'
 import footer from './footer'
 import blogCategory from './blogCategory'
+import pageSeo from './pageSeo'
 
 
 export const schemaTypes = [
@@ -18,5 +19,6 @@ export const schemaTypes = [
   author,
   blogCategory,
   blog,
-  footer
+  footer,
+  pageSeo
 ]
