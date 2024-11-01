@@ -26,18 +26,6 @@ export default
         validation: Rule => Rule.required()
       },
       {
-        name: 'seoTitle',
-        type: 'string',
-        title: 'Seo Title',
-        validation: Rule => Rule.required()
-      },
-      {
-        name: 'seoMetaDescription',
-        type: 'text',
-        title: 'Seo Meta Description',
-        validation: Rule => Rule.required()
-      },
-      {
         name: 'coverImage',
         title: 'Cover Image',
         type: 'image',
@@ -114,7 +102,23 @@ export default
         title: 'Date',
         type: 'datetime',
         validation: Rule => Rule.required()
-      }
-    ]
+      },
+      {
+        title: "Seo",
+        name: "seo",
+        type: "seoMetaFields",
+      },
+    ],
+    preview: {
+      select: {
+        metaTitle: "seo",
+      },
+      prepare(selection) {
+        const { metaTitle } = selection?.metaTitle || "";
+        return {
+          title: metaTitle || "seo",
+        };
+      },
+    },
   }
 
