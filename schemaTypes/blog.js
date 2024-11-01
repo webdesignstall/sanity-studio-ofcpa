@@ -83,6 +83,9 @@ export default
               hotspot: true
             }
           },
+          {
+            type: 'table'
+          }
           // {
           //   type: 'code',
           //   options: {
@@ -90,6 +93,13 @@ export default
           //   }
           // }
         ],
+        validation: Rule => Rule.required()
+      },
+      {
+        name: 'category',
+        title: 'Category',
+        type: 'reference',
+        to: [{type: 'blogCategory'}],
         validation: Rule => Rule.required()
       },
       {
