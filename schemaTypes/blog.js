@@ -98,6 +98,18 @@ export default
         validation: Rule => Rule.required()
       },
       {
+        name: 'tags',
+        title: 'Tags',
+        type: 'tags',
+        options: {
+          includeFromRelated: 'tags',
+          onCreate: (value) => ({
+            label: value,
+            value: value.toLowerCase().replace(/\W/g, '-'),
+          })
+        }
+      },
+      {
         name: 'date',
         title: 'Date',
         type: 'datetime',
