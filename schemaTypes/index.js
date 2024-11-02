@@ -8,6 +8,7 @@ import packages from './packages'
 import footer from './footer'
 import blogCategory from './blogCategory'
 import pageSeo from './pageSeo'
+import siteSettings from './siteSettings'
 
 
 export const schemaTypes = [
@@ -20,5 +21,6 @@ export const schemaTypes = [
   blogCategory,
   blog,
   footer,
-  pageSeo
+  pageSeo,
+  siteSettings
 ]
